@@ -1,0 +1,11 @@
+[zanegrey-server]
+name=Copr repo for server owned by zanegrey
+baseurl=https://copr-be.cloud.fedoraproject.org/results/zanegrey/server/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/copr-demaria-server.ro
+#gpgkey=https://copr-be.cloud.fedoraproject.org/results/zanegrey/server/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1

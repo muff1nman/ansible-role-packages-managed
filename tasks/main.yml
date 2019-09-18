@@ -1,0 +1,52 @@
+---
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "../vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "../vars/{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+    - "../vars/{{ ansible_distribution }}.yml"
+    - "../vars/{{ ansible_os_family }}.yml"
+
+- include_tasks: rpm_import_check.yml
+- package:
+    name: deltarpm
+
+- name: Copy repo {{ item }}
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/yum.repos.d/{{ item }}"
+  with_items: "{{ package_repos }}"
+- name: Copy rpm gpg key
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/pki/rpm-gpg/{{ item }}"
+  with_items: "{{ rpm_keys }}"
+- name: Import rpm gpg key
+  command: /usr/local/bin/rpm_import.sh /etc/pki/rpm-gpg/{{ item }}
+  register: rpm_import
+  changed_when: rpm_import.rc == 0
+  failed_when: rpm_import.rc != 170 and rpm_import.rc != 0
+  with_items: "{{ rpm_keys }}"
+
+- package:
+    name: yum-plugin-changelog
+  when: ansible_distribution != 'Fedora' or ansible_distribution_major_version <= '28'
+
+# EL7
+- when:
+    - ansible_distribution is defined
+    - ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
+    - ansible_distribution_version is defined
+    - ansible_distribution_major_version == '7'
+  block:
+  - name: Configure yum conf
+    template:
+      src: yum.conf
+      dest: /etc/yum.conf
+  - name: Install yum plugin remove with leaves
+    yum:
+      name: yum-plugin-remove-with-leaves
+      state: absent
+  - name: Ensure epel-release is absent
+    yum:
+      name: epel-release
+      state: absent

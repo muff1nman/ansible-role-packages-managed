@@ -1,0 +1,6 @@
+[nux-dextop-patches]
+name=Nux.Ro RPMs patched with fixes
+baseurl=http://repo.andrewdemaria.com/nux-dextop7-patch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-demaria.ro

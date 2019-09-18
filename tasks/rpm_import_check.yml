@@ -1,0 +1,6 @@
+---
+- copy: src={{ item }} dest=/usr/local/bin/{{ item }} mode=755
+  with_items:
+    - rpm_check_import.sh
+    - gpg_fingerprint.sh
+    - rpm_import.sh

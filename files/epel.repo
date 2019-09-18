@@ -1,0 +1,29 @@
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+includepkgs=bash-completion-extras.noarch burp* librsync* mosh* nmon* dkms* nginx* libass* lame* libdc1394* openal-soft* schroedinger* soxr* ddclient* git-lfs* transmission-daemon* libnatpmp* transmission-common* NetworkManager-* python2-pip* openconnect* openvpn* pkcs11-helper* stoken-libs* vpnc* vpnc-script* xl2tpd* libchromaprint*
+
+[epel-debuginfo]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Debug
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch/debug
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+includepkgs=bash-completion-extras.noarch burp* librsync* mosh* nmon* dkms* nginx* libass* lame* libdc1394* openal-soft* schroedinger* soxr* ddclient* git-lfs* transmission-daemon* libnatpmp* transmission-common* NetworkManager-* python2-pip* openconnect* openvpn* pkcs11-helper* stoken-libs* vpnc* vpnc-script* xl2tpd* libchromaprint*
+
+[epel-source]
+name=Extra Packages for Enterprise Linux 7 - $basearch - Source
+#baseurl=http://download.fedoraproject.org/pub/epel/7/SRPMS
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-source-7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+includepkgs=bash-completion-extras.noarch burp* librsync* mosh* nmon* dkms* nginx* libass* lame* libdc1394* openal-soft* schroedinger* soxr* ddclient* git-lfs* transmission-daemon* libnatpmp* transmission-common* NetworkManager-* python2-pip* openconnect* openvpn* pkcs11-helper* stoken-libs* vpnc* vpnc-script* xl2tpd* libchromaprint*

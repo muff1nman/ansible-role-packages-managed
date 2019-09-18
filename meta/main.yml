@@ -1,0 +1,4 @@
+---
+dependencies:
+  - { role: clruby }
+  - { role: updates-watched }
