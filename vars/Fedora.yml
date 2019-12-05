@@ -10,3 +10,4 @@ package_repos:
  - stack.repo
  - copr-demaria-desktop.repo
  - rpmfusion2.repo
+package_tmpl_repos: []

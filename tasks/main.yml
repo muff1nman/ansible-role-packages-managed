@@ -15,6 +15,11 @@
     src: "{{ item }}"
     dest: "/etc/yum.repos.d/{{ item }}"
   with_items: "{{ package_repos }}"
+- name: Copy repo {{ item }}
+  template:
+    src: "{{ item }}"
+    dest: "/etc/yum.repos.d/{{ item }}"
+  with_items: "{{ package_tmpl_repos }}"
 - name: Copy rpm gpg key
   copy:
     src: "{{ item }}"
