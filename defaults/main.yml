@@ -25,6 +25,7 @@ epel_whitelist:
 - stoken-libs*
 - vpnc*
 - vpnc-script*
+- libpskc*
 - xl2tpd*
 - libchromaprint*
 - apcupsd*
