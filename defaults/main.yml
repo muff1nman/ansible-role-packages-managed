@@ -39,3 +39,4 @@ epel_whitelist:
 - python-singledispatch*
 - python2-bcrypt*
 - python2-six*
+- perl-Data-Validate-IP*
