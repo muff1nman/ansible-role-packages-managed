@@ -5,7 +5,6 @@ rpm_keys:
  - "microsoft.asc"
 package_repos:
  - google-chrome.repo
- - stack.repo
  - copr-demaria-desktop.repo
  - rpmfusion2.repo
  - vscode.repo
