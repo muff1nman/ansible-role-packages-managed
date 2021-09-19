@@ -1,12 +1,8 @@
 ---
 rpm_keys:
- - copr-demaria-server.ro
- - RPM-GPG-KEY-demaria.ro
  - "RPM-GPG-KEY-rpmfusion-nonfree-fedora-{{ ansible_distribution_major_version }}"
  - "RPM-GPG-KEY-rpmfusion-free-fedora-{{ ansible_distribution_major_version }}"
- - "microsoft.asc"
 package_repos:
- - copr-demaria-server-fedora.repo
  - google-chrome.repo
  - stack.repo
  - copr-demaria-desktop.repo
