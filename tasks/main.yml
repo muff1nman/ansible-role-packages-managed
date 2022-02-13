@@ -1,4 +1,6 @@
 ---
+- debug:
+    msg: "Looking for vars for  {{ ansible_os_family }} - {{ ansible_distribution }} - {{ ansible_distribution_major_version }}"
 - include_vars: "{{ item }}"
   with_first_found:
     - "../vars/{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
@@ -7,8 +9,6 @@
     - "../vars/{{ ansible_os_family }}.yml"
 
 - include_tasks: rpm_import_check.yml
-- package:
-    name: deltarpm
 
 - name: Copy repo {{ item }}
   copy:
@@ -35,6 +35,17 @@
 - package:
     name: yum-plugin-changelog
   when: ansible_distribution != 'Fedora' or ansible_distribution_major_version <= '28'
+
+# EL8
+- when:
+    - ansible_distribution is defined
+    - ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
+    - ansible_distribution_version is defined
+    - ansible_distribution_major_version == '8'
+  block:
+  - name: Install epel
+    package:
+      name: epel-release
 
 # EL7
 - when:
