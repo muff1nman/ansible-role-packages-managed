@@ -9,7 +9,7 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
-includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam
+includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam,steam-devices
 
 [rpmfusion-free-debuginfo]
 name=RPM Fusion for Fedora $releasever - Free - Debug
@@ -43,7 +43,7 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
-includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam
+includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam,steam-devices
 
 [rpmfusion-free-updates-debuginfo]
 name=RPM Fusion for Fedora $releasever - Free - Updates Debug
@@ -106,7 +106,7 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
-includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam
+includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam,steam-devices
 
 [rpmfusion-nonfree-debuginfo]
 name=RPM Fusion for Fedora $releasever - Nonfree - Debug
@@ -140,7 +140,7 @@ type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
-includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam
+includepkgs=ffmpeg,a52dec,faad2-libs,ffmpeg-libs,lame-libs,libdca,libdvbpsi,libmad,libmpeg2,live555,twolame-libs,vlc,vlc-core,vlc-extras,x264-libs,x265-libs,xvidcore,libavdevice,opencore-amr,vo-amrwbenc,steam,steam-devices
 
 [rpmfusion-nonfree-updates-debuginfo]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates Debug
