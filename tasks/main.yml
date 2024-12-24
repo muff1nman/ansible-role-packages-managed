@@ -46,23 +46,3 @@
   - name: Install epel
     package:
       name: epel-release
-
-# EL7
-- when:
-    - ansible_distribution is defined
-    - ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
-    - ansible_distribution_version is defined
-    - ansible_distribution_major_version == '7'
-  block:
-  - name: Configure yum conf
-    template:
-      src: yum.conf
-      dest: /etc/yum.conf
-  - name: Install yum plugin remove with leaves
-    yum:
-      name: yum-plugin-remove-with-leaves
-      state: absent
-  - name: Ensure epel-release is absent
-    yum:
-      name: epel-release
-      state: absent
